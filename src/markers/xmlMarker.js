@@ -1,18 +1,12 @@
 SyntaxMarker.addLanguage('xml', {
     root: [
-        [/&lt;!--(.|\n)*?--&gt;/, function() {
-            //this.state('insideComment');
-            return 'number';
-         }],
+        [/&lt;!--(.|\n)*?--&gt;/, 'number'],
         [/&lt;/, function() {
             this.state('insideNode');
             return TokenJS.Ignore;
         }],
         [/[^&<]+/, 'symbol']
     ],
-//    insideComment: [
-//        [/--&gt;/]
-//    ]
     insideNode: [
         [/[^&<>\s/]+/, 'keyword'],
         [/\s+/, function() {
