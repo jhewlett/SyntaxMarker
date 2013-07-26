@@ -6,19 +6,33 @@
 </head>
 <body>
 
-<pre class="syntax-marker-highlight ruby">
-def test()
-    strings = 'single' + "double"
-    sym = :symbol
-    num = 4
+<pre class="syntax-marker-highlight xml">
+&lt;!-- support for xml and html --&gt;
 
-    return strings + sym.to_s + num.to_s  #stringify
-end
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../src/style.css&quot;/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;pre class=&quot;syntax-marker-highlight xml&quot;&gt;
+        &lt;test&gt;
+            value
+        &lt;/test&gt;
+    &lt;/pre&gt;
+
+&lt;script src=&quot;../lib/lexer.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../src/syntaxMarker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../src/markers/xmlMarker.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    SyntaxMarker.mark();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
-
 <script src="../lib/lexer.js"></script>
 <script src="../src/syntaxMarker.js"></script>
-<script src="../src/markers/rubyMarker.js"></script>
+<script src="../src/markers/xmlMarker.js"></script>
 <script type="text/javascript">
     SyntaxMarker.mark();
 </script>

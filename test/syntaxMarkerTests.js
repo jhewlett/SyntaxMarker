@@ -7,3 +7,9 @@ test("Handles multiple tokens and maintains text that is not considered a token"
 
     assertEquals('<code class="num1">1</code> <code class="plus">+</code> <code class="num2">2</code>;', SyntaxMarker.highlight('1 + 2;', tokens));
 });
+
+test("No matches, preserves text as-is", function () {
+    var tokens = [];
+
+    assertEquals('<test></test>', SyntaxMarker.highlight('<test></test>', tokens));
+});

@@ -28,6 +28,10 @@ SyntaxMarker.highlight = function(input, tokens) {
         }
     }
 
+    if (tokens.length == 0) {
+        outputHtml = input;
+    }
+
     return outputHtml;
 };
 
