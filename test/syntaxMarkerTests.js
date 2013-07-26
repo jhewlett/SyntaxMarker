@@ -13,3 +13,9 @@ test("No matches, preserves text as-is", function () {
 
     assertEquals('<test></test>', SyntaxMarker.highlight('<test></test>', tokens));
 });
+
+test("Empty matches are ignored", function () {
+    var tokens = [{text: '', token: 'token', index: 0}];
+
+    assertEquals('<test></test>', SyntaxMarker.highlight('<test></test>', tokens));
+});

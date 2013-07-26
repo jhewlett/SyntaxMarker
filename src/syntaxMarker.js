@@ -15,10 +15,12 @@ SyntaxMarker.highlight = function(input, tokens) {
             index += token.index - index;
         }
 
-        //add appropriate class to the token
-        outputHtml += '<code class="' + token.token + '">';
-        outputHtml += token.text;
-        outputHtml += '</code>';
+        if (token.text.length > 0) {
+            //add appropriate class to the token
+            outputHtml += '<code class="' + token.token + '">';
+            outputHtml += token.text;
+            outputHtml += '</code>';
+        }
 
         index += token.text.length;
 
@@ -28,7 +30,7 @@ SyntaxMarker.highlight = function(input, tokens) {
         }
     }
 
-    if (tokens.length == 0) {
+    if (tokens.length === 0) {
         outputHtml = input;
     }
 
