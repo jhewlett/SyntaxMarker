@@ -29,7 +29,8 @@ SyntaxMarker.addLanguage('xml', {
         }]
     ],
     attrValue: [
-        [/\w+/, 'comment'],     //turn these into quote? support both?
+        [/"[^<>"]*"/, 'comment'],
+        [/'[^<>']*'/, 'comment'],
         [/\s*\/?&gt;/, function() {
             this.state('root');
             return TokenJS.Ignore;
