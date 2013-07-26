@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../src/style.css"/>
+</head>
+<body>
+
+<pre class="syntax-marker-highlight ruby">
+def test()
+    strings = 'single' + "double"
+    sym = :symbol
+    num = 4
+
+    return strings + sym.to_s + num.to_s  #stringify
+end
+</pre>
+
+<script src="../lib/lexer.js"></script>
+<script src="../src/syntaxMarker.js"></script>
+<script src="../src/markers/rubyMarker.js"></script>
+<script type="text/javascript">
+    SyntaxMarker.mark();
+</script>
+</body>
+</html>
