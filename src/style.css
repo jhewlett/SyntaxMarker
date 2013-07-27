@@ -23,14 +23,6 @@
     color: green !important;
 }
 
-.multi-comment {
-    color: lightslategray !important;
-}
-
-.doc-comment {
-    color: orangered !important;
-}
-
 .string {
     color: red !important;
 }
