@@ -4,7 +4,8 @@ SyntaxMarker.addLanguage('csharp', {
         [/\b(int|uint|long|short|bool|double|float|decimal|string)\b/, 'types'],
         //[/\b(DateTime|List|Array)\b/, 'types'],
         [/[0-9]+/, 'number'],
-        [/[0-9]*\.[0-9]*/, 'number'],
+        [/[0-9]+\.[0-9]*/, 'number'],
+        [/[0-9]*\.[0-9]+/, 'number'],
         [/"[^"]*"/, 'string'],
         [/'[^']*'/, 'symbol'],
         [/\/\/\/.*/, 'doc-comment'],
@@ -12,5 +13,6 @@ SyntaxMarker.addLanguage('csharp', {
         [/\/\*(.|\n)*?\*\//, 'multi-comment']
         //scientific notation
         //string/id literals
+        //attributes (class, method)
     ]
 })

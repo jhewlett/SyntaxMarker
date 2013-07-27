@@ -6,33 +6,44 @@
 </head>
 <body>
 
-<pre class="syntax-marker-highlight xml">
-&lt;!-- support for xml and html --&gt;
+<pre class="syntax-marker-highlight csharp">
+using System;
 
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../src/style.css&quot;/&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;pre class=&quot;syntax-marker-highlight xml&quot;&gt;
-        &lt;test&gt;
-            value
-        &lt;/test&gt;
-    &lt;/pre&gt;
+interface IAdd
+{
+  bool Add();
+}
 
-&lt;script src=&quot;../lib/lexer.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;../src/syntaxMarker.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;../src/markers/xmlMarker.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    SyntaxMarker.mark();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+namespace Math
+{
+  /*this method
+  is really important*/
+  internal static class Rotator : IRotate
+  {
+    /// &lt;summary&gt;
+    /// Add some numbers together. The parameters are not actually used.
+    /// &lt;/summary&gt;
+    public static bool Add(bool a, DateTime b, out double c, ref float d)
+    {
+      long total = 0;   //initialize
+      int[] arr = new [] {1, 2, 3};
+      foreach (var num in arr)
+      {
+        total += num;
+        Console.WriteLine("Added a new number");
+        Console.WriteLine('c');  //character
+      }
+
+      var returnVal = true;
+
+      return returnVal;
+    }
+  }
+}
 </pre>
 <script src="../lib/lexer.js"></script>
 <script src="../src/syntaxMarker.js"></script>
-<script src="../src/markers/xmlMarker.js"></script>
+<script src="../src/markers/cSharpMarker.js"></script>
 <script type="text/javascript">
     SyntaxMarker.mark();
 </script>
