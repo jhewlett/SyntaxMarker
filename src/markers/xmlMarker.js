@@ -5,7 +5,7 @@ SyntaxMarker.addLanguage('xml', {
             this.state('insideNode');
             return TokenJS.Ignore;
         }],
-        [/[^&<]+/, 'symbol']
+        [/[^&<]+/, 'comment']
     ],
     insideNode: [
         [/[^&<>\s/]+/, 'keyword'],
@@ -19,7 +19,7 @@ SyntaxMarker.addLanguage('xml', {
         }]
     ],
     attribute: [
-        [/[^&<>\s=/]+/, 'string'],
+        [/[^&<>\s=/]+/, 'xmlAttribute'],
         [/&gt;/, function() {           // support for html-style attributes without values
             this.state('root');
             return TokenJS.Ignore;
@@ -30,8 +30,8 @@ SyntaxMarker.addLanguage('xml', {
         }]
     ],
     attrValue: [
-        [/"[^<>"]*"/, 'comment'],
-        [/'[^<>']*'/, 'comment'],
+        [/"[^<>"]*"/, 'string'],
+        [/'[^<>']*'/, 'string'],
         [/\s*\/?&gt;/, function() {
             this.state('root');
             return TokenJS.Ignore;
