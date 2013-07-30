@@ -30,8 +30,8 @@ SyntaxMarker.addLanguage('xml', {
         }]
     ],
     attrValue: [
-        [/"[^<>"]*"/, 'string'],
-        [/'[^<>']*'/, 'string'],
+        [SyntaxMarker.commonExpressions.doubleQuoteString, 'string'],
+        [SyntaxMarker.commonExpressions.singleQuoteString, 'string'],
         [/\s*\/?&gt;/, function() {
             this.state('root');
             return TokenJS.Ignore;

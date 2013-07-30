@@ -1,5 +1,11 @@
 var SyntaxMarker = SyntaxMarker || {
-    languages: {}
+    languages: {},
+    commonExpressions: {
+        decimal: /([0-9]+\.[0-9]*)|([0-9]*\.[0-9]+)/,
+        integer: /[0-9]+/,
+        doubleQuoteString: /"[^"]*"/,
+        singleQuoteString: /'[^']*'/
+    }
 };
 
 SyntaxMarker.highlight = function(input, tokens) {
