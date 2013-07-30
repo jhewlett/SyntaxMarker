@@ -36,6 +36,6 @@ end
 
 Language Support
 ---------------
-Currently there is support for Ruby and Xml/Html. Adding support for additional languages is fairly straightforward.
+Currently there is support for Ruby, C#, and Xml/Html. Adding support for additional languages is fairly straightforward.
 
-The Xml marker expects `<` and `>` to be replaced with `&lt;` and `&gt;`.
+Note that the Xml marker expects `<` and `>` to be replaced with `&lt;` and `&gt;`.
